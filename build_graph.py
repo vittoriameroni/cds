@@ -29,13 +29,6 @@ G.add_nodes_from(NER_dictionnary.keys())
 for (a, b), weight in co_occurrence.items():
     G.add_edge(a, b, weight=weight)
 
-# Optional: Draw graph
-pos = nx.spring_layout(G, seed=42)
-edge_weights = [G[u][v]['weight'] for u, v in G.edges()]
-nx.draw(G, pos, with_labels=True, width=edge_weights, node_size=7000, node_color='lightblue')
-nx.draw_networkx_edge_labels(G, pos, edge_labels={(u, v): d['weight'] for u, v, d in G.edges(data=True)})
-plt.show()
-
 nx.write_graphml(G, "graph.graphml")
 
 
