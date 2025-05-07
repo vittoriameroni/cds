@@ -1,0 +1,882 @@
+{
+    "Albania": {
+        "map_name": "Albania",
+        "translated_name": "Albania",
+        "english_name": "Albania",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Caucausus"
+    },
+    "Amasonia": {
+        "map_name": "Amasonia",
+        "translated_name": "the Amazons",
+        "english_name": "Amazonia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Caucausus"
+    },
+    "Armenia": {
+        "map_name": "Armenia",
+        "translated_name": "Armenia",
+        "english_name": "Armenia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Armenia"
+    },
+    "Arcusia": {
+        "map_name": "Arcusia",
+        "translated_name": "",
+        "english_name": "Arcusia",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Iran"
+    },
+    "Assiria": {
+        "map_name": "Assiria",
+        "translated_name": "Assyria",
+        "english_name": "Assyria",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Iraq"
+    },
+    "Babilonia": {
+        "map_name": "Babilonia",
+        "translated_name": "Babylon",
+        "english_name": "Babylonia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Iraq"
+    },
+    "Caspy": {
+        "map_name": "Caspy",
+        "translated_name": "",
+        "english_name": "Caspian Sea",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Caspian Sea"
+    },
+    "Cilicia": {
+        "map_name": "Cilicia",
+        "translated_name": "Cilicia",
+        "english_name": "Cilicia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Turkey"
+    },
+    "Evilath": {
+        "map_name": "Evilath",
+        "translated_name": "Havilah",
+        "english_name": "Havilah",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": ""
+    },
+    "Frigia": {
+        "map_name": "Frigia",
+        "translated_name": "Phrygia",
+        "english_name": "Phrygia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Asia Minor"
+    },
+    "Galilea": {
+        "map_name": "Galilea",
+        "translated_name": "Galilee",
+        "english_name": "Galilee",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Palestine"
+    },
+    "Grandis cain": {
+        "map_name": "Grandis cain",
+        "translated_name": "",
+        "english_name": "Grand Khan",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Mongolia"
+    },
+    "Hircania": {
+        "map_name": "Hircania",
+        "translated_name": "Hyrcania",
+        "english_name": "Hyrcania",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Caspian Sea"
+    },
+    "Idumea": {
+        "map_name": "Idumea",
+        "translated_name": "Idumea",
+        "english_name": "Edom",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Mt. Sinai"
+    },
+    "India": {
+        "map_name": "India",
+        "translated_name": "India",
+        "english_name": "India",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "India"
+    },
+    "Judea": {
+        "map_name": "Judea",
+        "translated_name": "Judea",
+        "english_name": "Judea",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Palestine"
+    },
+    "Iturrea": {
+        "map_name": "Iturrea",
+        "translated_name": "",
+        "english_name": "Ituraea",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Syria"
+    },
+    "Kaldea": {
+        "map_name": "Kaldea",
+        "translated_name": "Chaldea",
+        "english_name": "Chaldea",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Arabian Peninsula"
+    },
+    "Laniania": {
+        "map_name": "Laniania",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "China"
+    },
+    "Mare Amasoneorum": {
+        "map_name": "Mare Amasoneorum",
+        "translated_name": "",
+        "english_name": "Caspian Sea",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Caspian Sea"
+    },
+    "Medea": {
+        "map_name": "Medea",
+        "translated_name": "",
+        "english_name": "Medea",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Caspian Sea"
+    },
+    "Montes": {
+        "map_name": "Montes",
+        "translated_name": "Caucasus",
+        "english_name": "Caucasus Mountains",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Caucasus Mountains"
+    },
+    "Presbiteri Ioh": {
+        "map_name": "Presbiteri Ioh",
+        "translated_name": "",
+        "english_name": "Priest John",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Samaria": {
+        "map_name": "Samaria",
+        "translated_name": "Samaria",
+        "english_name": "Samaria",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Palestine"
+    },
+    "Siria": {
+        "map_name": "Siria",
+        "translated_name": "Sina",
+        "english_name": "Syria",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Syria"
+    },
+    "Sitia": {
+        "map_name": "Sitia",
+        "translated_name": "Scythia",
+        "english_name": "Scythia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Ukraine"
+    },
+    "Terra Picinorum": {
+        "map_name": "Terra Picinorum",
+        "translated_name": "",
+        "english_name": "Land of the Pici",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Caspian Sea"
+    },
+    "Arabia": {
+        "map_name": "Arabia",
+        "translated_name": "Arabia",
+        "english_name": "Arabia",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Arabian Peninsula"
+    },
+    "Arbor solis et lune": {
+        "map_name": "Arbor solis et lune",
+        "translated_name": "",
+        "english_name": "Tree of the Sun and Moon",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "India"
+    },
+    "Carmelus": {
+        "map_name": "Carmelus",
+        "translated_name": "Carmel",
+        "english_name": "Mount Carmel",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Mount Carmel"
+    },
+    "Mons auri": {
+        "map_name": "Mons auri",
+        "translated_name": "",
+        "english_name": "Mountains of Gold",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Ophir": {
+        "map_name": "Ophir",
+        "translated_name": "Ophir",
+        "english_name": "Ophir",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": ""
+    },
+    "Palestina": {
+        "map_name": "Palestina",
+        "translated_name": "Palestine",
+        "english_name": "Palestine",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Palestine"
+    },
+    "Pentapolis": {
+        "map_name": "Pentapolis",
+        "translated_name": "Pentapolis",
+        "english_name": "Pentapolis",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Middle-East"
+    },
+    "Philistiim": {
+        "map_name": "Philistiim",
+        "translated_name": "",
+        "english_name": "Philistines",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Palestine"
+    },
+    "Persia": {
+        "map_name": "Persia",
+        "translated_name": "Persia",
+        "english_name": "Iran",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Iran"
+    },
+    "Sabea": {
+        "map_name": "Sabea",
+        "translated_name": "Sabaea",
+        "english_name": "Sheba",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Arabia"
+    },
+    "Tabrobana": {
+        "map_name": "Tabrobana",
+        "translated_name": "Taprobane",
+        "english_name": "Taprobana",
+        "continent": "Asia",
+        "in_book": true,
+        "real_life": "Sri Lanka"
+    },
+    "Terra amaleth": {
+        "map_name": "Terra amaleth",
+        "translated_name": "",
+        "english_name": "Land of the Amalek",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Arabia"
+    },
+    "Terra amoreorum": {
+        "map_name": "Terra amoreorum",
+        "translated_name": "",
+        "english_name": "Land of the Amorites",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Palestine"
+    },
+    "Terra diversorum monstrorum": {
+        "map_name": "Terra diversorum monstrorum",
+        "translated_name": "",
+        "english_name": "Land of Diverse Monsters",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Terra moab": {
+        "map_name": "Terra moab",
+        "translated_name": "",
+        "english_name": "Moab Kingdom",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Jordan"
+    },
+    "Testudinum": {
+        "map_name": "Testudinum",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Tile insula": {
+        "map_name": "Tile insula",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "India"
+    },
+    "Trabobatha": {
+        "map_name": "Trabobatha",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Asia",
+        "in_book": false,
+        "real_life": "Sumatra"
+    },
+    "Allexandria": {
+        "map_name": "Allexandria",
+        "translated_name": "",
+        "english_name": "Alexandria",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "Egypt"
+    },
+    "Braciana": {
+        "map_name": "Braciana",
+        "translated_name": "Byzacena",
+        "english_name": "Byzacena",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "North Africa"
+    },
+    "Cartago": {
+        "map_name": "Cartago",
+        "translated_name": "Carthage",
+        "english_name": "Cathage",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "North Africa"
+    },
+    "Egiptus": {
+        "map_name": "Egiptus",
+        "translated_name": "Egypt",
+        "english_name": "Egypt",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "Egypt"
+    },
+    "Ethiopia": {
+        "map_name": "Ethiopia",
+        "translated_name": "Ethiopia",
+        "english_name": "Ethiopia",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "Ethiopia"
+    },
+    "Gorgoles": {
+        "map_name": "Gorgoles",
+        "translated_name": "the Gorgons",
+        "english_name": "Gorgades Islands",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "Atlantic Africa"
+    },
+    "Ipona": {
+        "map_name": "Ipona",
+        "translated_name": "",
+        "english_name": "Hippone",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "Algeria"
+    },
+    "Iunonia": {
+        "map_name": "Iunonia",
+        "translated_name": "",
+        "english_name": "Fortunate Islands",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Lybya": {
+        "map_name": "Lybya",
+        "translated_name": "",
+        "english_name": "Libya",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "Libya"
+    },
+    "Maditania": {
+        "map_name": "Maditania",
+        "translated_name": "Mauntama",
+        "english_name": "Mauritania",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "Morrocco"
+    },
+    "Mons aliariorum": {
+        "map_name": "Mons aliariorum",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Mons alphanrye": {
+        "map_name": "Mons alphanrye",
+        "translated_name": "",
+        "english_name": "",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Mons calesti": {
+        "map_name": "Mons calesti",
+        "translated_name": "",
+        "english_name": "Mountain of the Stars",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Numedia": {
+        "map_name": "Nicomedea",
+        "translated_name": "Numedia",
+        "english_name": "Numedia",
+        "continent": "Africa",
+        "in_book": true,
+        "real_life": "North Africa"
+    },
+    "Petrapolis": {
+        "map_name": "Petrapolis",
+        "translated_name": "",
+        "english_name": "Petrapolis",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "Arabia"
+    },
+    "Reugio sive reu": {
+        "map_name": "Reugio sive reu",
+        "translated_name": "",
+        "english_name": "Rusicada",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "North Africa"
+    },
+    "Terra Ferarum": {
+        "map_name": "Terra Ferarum",
+        "translated_name": "",
+        "english_name": "Land of Wild Beasts",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Torttes": {
+        "map_name": "Torttes",
+        "translated_name": "",
+        "english_name": "Tortosa",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "Syria"
+    },
+    "Tragodisia near": {
+        "map_name": "Tragodisia near",
+        "translated_name": "",
+        "english_name": "Trogodite",
+        "continent": "Africa",
+        "in_book": false,
+        "real_life": "North Africa"
+    },
+    "Alania": {
+        "map_name": "Alania",
+        "translated_name": "Alania",
+        "english_name": "Land of the Alani",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Crimea"
+    },
+    "Alimania": {
+        "map_name": "Alimania",
+        "translated_name": "Germany",
+        "english_name": "Germany",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Germany"
+    },
+    "Alsacia": {
+        "map_name": "Alsacia",
+        "translated_name": "",
+        "english_name": "Alsace",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Alsace"
+    },
+    "Andegavum": {
+        "map_name": "Andegavum",
+        "translated_name": "",
+        "english_name": "Andalusia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Andalusia"
+    },
+    "Anglia": {
+        "map_name": "Anglia",
+        "translated_name": "England",
+        "english_name": "England",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "England"
+    },
+    "Apulia": {
+        "map_name": "Apulia",
+        "translated_name": "Apulia",
+        "english_name": "Apulia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Apulia"
+    },
+    "Bohemia": {
+        "map_name": "Bohemia",
+        "translated_name": "",
+        "english_name": "Bohemia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Czechia"
+    },
+    "Brabantia": {
+        "map_name": "Brabantia",
+        "translated_name": "Brabant",
+        "english_name": "Brabant",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Belgium"
+    },
+    "Ciprus": {
+        "map_name": "Ciprus",
+        "translated_name": "Cyprus",
+        "english_name": "Cyprus",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Cyprus"
+    },
+    "Creta": {
+        "map_name": "Creta",
+        "translated_name": "Crete",
+        "english_name": "Crete",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Crete"
+    },
+    "Dacia": {
+        "map_name": "Dacia",
+        "translated_name": "Dacia",
+        "english_name": "Denmark",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Denmark"
+    },
+    "Equitania": {
+        "map_name": "Equitania",
+        "translated_name": "Aquitaine",
+        "english_name": "Aquitania",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Aquitania"
+    },
+    "Flandria": {
+        "map_name": "Flandria",
+        "translated_name": "Flanders",
+        "english_name": "Flanders",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Flanders"
+    },
+    "Francia": {
+        "map_name": "Francia",
+        "translated_name": "France",
+        "english_name": "France",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "France"
+    },
+    "Frisia": {
+        "map_name": "Frisia",
+        "translated_name": "Frisia",
+        "english_name": "Frisia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Netherlands"
+    },
+    "Galicia": {
+        "map_name": "Galicia",
+        "translated_name": "Galicia",
+        "english_name": "Galicia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Galicia"
+    },
+    "Gothia": {
+        "map_name": "Gothia",
+        "translated_name": "Gothia",
+        "english_name": "Sweden",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Sweden"
+    },
+    "Grecia": {
+        "map_name": "Grecia",
+        "translated_name": "Greece",
+        "english_name": "Greece",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Greece"
+    },
+    "Hispania": {
+        "map_name": "Hispania",
+        "translated_name": "",
+        "english_name": "Spain",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Spain"
+    },
+    "Holsacia": {
+        "map_name": "Holsacia",
+        "translated_name": "",
+        "english_name": "Holstein",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Holstein"
+    },
+    "Island": {
+        "map_name": "Island",
+        "translated_name": "Iceland",
+        "english_name": "Iceland",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Iceland"
+    },
+    "Lattavia": {
+        "map_name": "Lattavia",
+        "translated_name": "",
+        "english_name": "Latvia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Latvia"
+    },
+    "Livonia": {
+        "map_name": "Livonia",
+        "translated_name": "Livonia",
+        "english_name": "Livonia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Baltic Countries"
+    },
+    "Macedonia": {
+        "map_name": "Macedonia",
+        "translated_name": "Macedonia",
+        "english_name": "Macedonia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Greece"
+    },
+    "Misena": {
+        "map_name": "Misena",
+        "translated_name": "Missena",
+        "english_name": "Meissen",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Germany"
+    },
+    "Moravia": {
+        "map_name": "Moravia",
+        "translated_name": "",
+        "english_name": "Moracia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Czechia"
+    },
+    "Moscavia": {
+        "map_name": "Moscavia",
+        "translated_name": "",
+        "english_name": "Moscovy",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Russia"
+    },
+    "Nicomedia": {
+        "map_name": "Nicomedia",
+        "translated_name": "",
+        "english_name": "Nicomedia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Turkey"
+    },
+    "Norwe": {
+        "map_name": "Norwe",
+        "translated_name": "Norway",
+        "english_name": "Norway",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Norway"
+    },
+    "Obtritorum": {
+        "map_name": "Obtritorum",
+        "translated_name": "",
+        "english_name": "Obotrites",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Baltic Countries"
+    },
+    "Polonia": {
+        "map_name": "Polonia",
+        "translated_name": "",
+        "english_name": "Poland",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Poland"
+    },
+    "Pomegaria": {
+        "map_name": "Pomegaria",
+        "translated_name": "",
+        "english_name": "Pomerania",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Poland"
+    },
+    "Prucia": {
+        "map_name": "Prucia",
+        "translated_name": "",
+        "english_name": "Prussia",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": "Poland"
+    },
+    "Rodus": {
+        "map_name": "Rodus",
+        "translated_name": "Rhodes",
+        "english_name": "Rhodes",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Rhodes"
+    },
+    "Roma": {
+        "map_name": "Roma",
+        "translated_name": "Rome",
+        "english_name": "Rome",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Rome"
+    },
+    "Saxonia": {
+        "map_name": "Saxonia",
+        "translated_name": "Saxony",
+        "english_name": "Saxony",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Saxony"
+    },
+    "Slavia Maior": {
+        "map_name": "Slavia Maior",
+        "translated_name": "Slavia",
+        "english_name": "Major Yougoslavia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "North Balkans"
+    },
+    "Slavia Minor": {
+        "map_name": "Slavia Minor",
+        "translated_name": "Slavia",
+        "english_name": "Minor Yougoslavia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "South Balkans"
+    },
+    "Subaudia": {
+        "map_name": "Subaudia",
+        "translated_name": "Sabandia",
+        "english_name": "Aude River",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "France"
+    },
+    "Swevi": {
+        "map_name": "Swevi",
+        "translated_name": "Suevia",
+        "english_name": "Swabia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Germany"
+    },
+    "Tartarea": {
+        "map_name": "Tartarea",
+        "translated_name": "",
+        "english_name": "Tartary",
+        "continent": "Europe",
+        "in_book": false,
+        "real_life": ""
+    },
+    "Tessalia": {
+        "map_name": "Tessalia",
+        "translated_name": "Thessaly",
+        "english_name": "Thessaly",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Greece"
+    },
+    "Ungaria": {
+        "map_name": "Ungaria",
+        "translated_name": "Pannonia",
+        "english_name": "Hungary",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Hungary"
+    },
+    "Venecia": {
+        "map_name": "Venecia",
+        "translated_name": "Venice",
+        "english_name": "Venice",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Venice"
+    },
+    "Vinland": {
+        "map_name": "Vinland",
+        "translated_name": "Umlandia",
+        "english_name": "Finland",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Finland"
+    },
+    "Wstva": {
+        "map_name": "Wstva",
+        "translated_name": "Westphalia",
+        "english_name": "Westphalia",
+        "continent": "Europe",
+        "in_book": true,
+        "real_life": "Germany"
+    }
+}
