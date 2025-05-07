@@ -8,14 +8,14 @@ from itertools import combinations
 
 nlp = spacy.load('en_core_web_sm')
 
-with open("NER_dictionnary.json", "r") as file:
+with open("NER_dictionnary_clean_only_hills.json", "r") as file:
     NER_dictionnary = json.load(file)
 
 # Invert data: term -> list of keys where it appears
 term_to_keys = defaultdict(set)
 for key, terms in NER_dictionnary.items():
     for term in terms:
-        term_to_keys[term].add(key)
+        term_to_keys[term.lower()].add(key)
 
 # Count co-occurrences between key pairs
 co_occurrence = defaultdict(int)
@@ -29,7 +29,7 @@ G.add_nodes_from(NER_dictionnary.keys())
 for (a, b), weight in co_occurrence.items():
     G.add_edge(a, b, weight=weight)
 
-nx.write_graphml(G, "graph.graphml")
+nx.write_graphml(G, "graph_only_hills.graphml")
 
 
 
