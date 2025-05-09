@@ -1,0 +1,297 @@
+{
+    "Assiria": [
+        "Assyria",
+        "India"
+    ],
+    "Arabia": [
+        "Arabia"
+    ],
+    "Armenia": [
+        "Armenia"
+    ],
+    "Albania": [
+        "Albania"
+    ],
+    "Amasonia": [
+        "Albania",
+        "Amazonia"
+    ],
+    "Babilonia": [
+        "Assyria",
+        "Chaldea",
+        "Babylonia",
+        "Judea"
+    ],
+    "Kaldea": [
+        "Rome",
+        "Chaldea"
+    ],
+    "Cilicia": [
+        "Cilicia"
+    ],
+    "Evilath": [
+        "India",
+        "Havilah"
+    ],
+    "Frigia": [
+        "Greece",
+        "Phrygia"
+    ],
+    "Galilea": [
+        "Palestine",
+        "Galilee"
+    ],
+    "India": [
+        "India",
+        "Ethiopia",
+        "Hyrcania"
+    ],
+    "Hircania": [
+        "Albania",
+        "Hyrcania",
+        "Germany",
+        "Scythia"
+    ],
+    "Idumea": [
+        "Arabia",
+        "Palestine",
+        "Edom"
+    ],
+    "Judea": [
+        "Egypt",
+        "Judea",
+        "Palestine",
+        "Galilee",
+        "Arabia"
+    ],
+    "Ophir": [
+        "India",
+        "Havilah",
+        "Ophir",
+        "Judea"
+    ],
+    "Palestina": [
+        "Palestine",
+        "Philistines",
+        "Judea"
+    ],
+    "Pentapolis": [
+        "Arabia",
+        "Pentapolis",
+        "Palestine",
+        "Libya"
+    ],
+    "Persia": [
+        "Germany",
+        "Greece",
+        "Iran"
+    ],
+    "Sabea": [
+        "Ethiopia",
+        "Egypt",
+        "Chaldea",
+        "Arabia",
+        "Sheba"
+    ],
+    "Samaria": [
+        "Samaria",
+        "Palestine",
+        "Galilee",
+        "Judea"
+    ],
+    "Siria": [
+        "India",
+        "Egypt",
+        "Palestine",
+        "Syria",
+        "Armenia"
+    ],
+    "Sitia": [
+        "Germany",
+        "Hyrcania",
+        "Scythia"
+    ],
+    "Alania": [
+        "Land of the Alani",
+        "Spain",
+        "Scythia"
+    ],
+    "Alimania": [
+        "Germany",
+        "Scythia"
+    ],
+    "Anglia": [
+        "England",
+        "Rome",
+        "Spain"
+    ],
+    "Equitania": [
+        "Spain",
+        "Aquitania"
+    ],
+    "Apulia": [
+        "Apulia"
+    ],
+    "Brabantia": [
+        "Germany",
+        "Brabant"
+    ],
+    "Dacia": [
+        "Germany",
+        "Denmark"
+    ],
+    "Francia": [
+        "Greece",
+        "France"
+    ],
+    "Flandria": [
+        "England",
+        "Germany",
+        "Flanders"
+    ],
+    "Frisia": [
+        "Frisia",
+        "Germany"
+    ],
+    "Grecia": [
+        "Thessaly",
+        "Greece",
+        "Crete"
+    ],
+    "Galicia": [
+        "Galicia",
+        "Spain"
+    ],
+    "Gothia": [
+        "Spain",
+        "Norway",
+        "Germany",
+        "Sweden"
+    ],
+    "Livonia": [
+        "Germany",
+        "Livonia"
+    ],
+    "Macedonia": [
+        "Macedonia",
+        "Egypt",
+        "India",
+        "Armenia"
+    ],
+    "Montes": [
+        "India",
+        "Caucasus Mountains"
+    ],
+    "Misena": [
+        "Bohemia",
+        "Meissen",
+        "Germany",
+        "Poland"
+    ],
+    "Norwe": [
+        "Galicia",
+        "Norway",
+        "Iceland"
+    ],
+    "Ungaria": [
+        "Galicia",
+        "Germany",
+        "Greece",
+        "Hungary"
+    ],
+    "Roma": [
+        "Rome"
+    ],
+    "Subaudia": [
+        "Aude River"
+    ],
+    "Saxonia": [
+        "Germany",
+        "Frisia",
+        "Bohemia",
+        "Westphalia",
+        "Saxony",
+        "Poland"
+    ],
+    "Swevi": [
+        "Swabia",
+        "Germany",
+        "Alsace"
+    ],
+    "Tessalia": [
+        "Macedonia",
+        "Thessaly",
+        "Greece"
+    ],
+    "Venecia": [
+        "Venice",
+        "Greece"
+    ],
+    "Wstva": [
+        "Germany",
+        "Frisia",
+        "England",
+        "Westphalia",
+        "Saxony"
+    ],
+    "Vinland": [
+        "Finland",
+        "Norway"
+    ],
+    "Island": [
+        "Iceland",
+        "Norway"
+    ],
+    "Braciana": [
+        "Byzacena"
+    ],
+    "Egiptus": [
+        "Libya",
+        "Alexandria",
+        "Egypt",
+        "Ethiopia"
+    ],
+    "Ethiopia": [
+        "Egypt",
+        "Ethiopia",
+        "Spain"
+    ],
+    "Cartago": [
+        "Cathage",
+        "Rome",
+        "Spain"
+    ],
+    "Lybya": [
+        "Libya",
+        "Egypt",
+        "Ethiopia"
+    ],
+    "Maditania": [
+        "Mauritania"
+    ],
+    "Numedia": [
+        "Numedia"
+    ],
+    "Carmelus": [
+        "Mount Carmel",
+        "Judea"
+    ],
+    "Ciprus": [
+        "Cyprus"
+    ],
+    "Creta": [
+        "Greece",
+        "Crete"
+    ],
+    "Gorgoles": [
+        "Gorgades Islands"
+    ],
+    "Rodus": [
+        "Rhodes",
+        "Cyprus"
+    ],
+    "Tabrobana": [
+        "India",
+        "Taprobana"
+    ]
+}

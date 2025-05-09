@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>D3 Network from GraphML</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      overflow: hidden;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+      clip-path: url(#circle-clip); /* Apply clipping path */
+    }
+    #videoContainer {
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20; /* Ensure it's above the graph nodes */
+      overflow: hidden;
+    }
+    /* This will ensure the selected node stays in front */
+    .selected-node {
+      z-index: 100;  /* High z-index to bring the node to the front */
+      opacity: 1 !important;  /* Ensure it's visible when selected */
+    }
+
+    #videoPlayer {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;  /* Makes the video player round */
+      object-fit: cover;   /* Ensures the video fills the container and maintains aspect ratio */
+      clip-path: circle(50%);  /* Clips the video to be inside the circle */
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+    text {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      pointer-events: none;
+    }
+    /* Emphasize the outside with white color */
+    .circle-background {
+      fill: white;
+    }
+    /* Emphasize circle with border */
+    .circle-border {
+      fill: black;
+      stroke: #000;
+      stroke-width: 5;
+    }
+  </style>
+</head>
+<body>
+<div id="videoContainer">
+  <video id="videoPlayer"></video>
+</div>
+<svg>
+  <!-- Clip path for circular clipping -->
+  <defs>
+    <clipPath id="circle-clip">
+      <circle cx="50%" cy="50%" r="30%" />
+    </clipPath>
+  </defs>
+  
+  <!-- White background outside the circle -->
+  <rect width="100%" height="100%" class="circle-background"/>
+  
+  <!-- Emphasized border for the clipped circle -->
+  <circle cx="50%" cy="50%" r="30%" class="circle-border"/>
+</svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+const width = window.innerWidth;
+const height = window.innerHeight;
+const radius = Math.min(width, height) * 0.3; // Set radius to 30% of the width/height
+
+const svg = d3.select("svg")
+  .attr("viewBox", [0, 0, width, height])
+  .append("g")
+  .attr("transform", `translate(${width / 2},${height / 2})`);
+
+let simulation;
+
+const colorScale = d3.scaleOrdinal().domain(["Asia", "Europe", "Africa"]).range(["#3B727C", "#B9A37E", "#82A775"]);
+let selected = null;
+
+// Load and parse GraphML
+fetch('../graph_only_hills.graphml')
+  .then(response => response.text())
+  .then(text => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "text/xml");
+
+    const nodeElements = Array.from(xml.getElementsByTagName("node"));
+    const edgeElements = Array.from(xml.getElementsByTagName("edge"));
+
+    const nodes = Array.from(xml.getElementsByTagName("node"))
+        .map(node => {
+            const id = node.getAttribute("id");
+            const dataTags = node.getElementsByTagName("data");
+            const continentTag = Array.from(dataTags).find(d => d.getAttribute("key") === "d0");
+            const continent = continentTag ? continentTag.textContent : null;
+
+            return id && continent ? { id, continent } : null;
+        })
+        .filter(Boolean); // Removes nulls
+
+    const knownIds = new Set(nodes.map(n => n.id));
+
+    const links = Array.from(xml.getElementsByTagName("edge"))
+        .map(edge => {
+        const source = edge.getAttribute("source");
+        const target = edge.getAttribute("target");
+        const dataTags = Array.from(edge.getElementsByTagName("data"));
+        const weightTag = dataTags.find(d => d.getAttribute("key") === "d1");
+        const weight = weightTag ? +weightTag.textContent : 1;
+
+        return { source, target, weight };
+    });
+
+    drawGraph(nodes, links);
+  });
+
+function drawGraph(nodes, linksRaw) {
+  const hasHeavyEdges = linksRaw.some(e => {
+    const w = +e.weight || 0;
+    return w > 1;
+  });
+  const links = hasHeavyEdges ? linksRaw.filter(e => +e.weight > 1) : linksRaw;
+
+  simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(120).strength(1))
+    .force("charge", d3.forceManyBody().strength(-500)) // strong repulsion
+    .force("center", d3.forceCenter(0, 0)) // Center at (0,0) initially
+    .force("collision", d3.forceCollide().radius(d => d.radius || 20).strength(1))
+    .force("boundingCircle", forceBoundingCircle(radius - 15)) // Match radius of bounding circle
+    .on("tick", ticked);
+
+    // Compute max weight to normalize widths
+  const maxWeight = d3.max(links, d => d.weight);
+
+  // Create a scale for stroke width (optional, makes it flexible)
+  const edgeWidthScale = d3.scaleLinear()
+    .domain([1, maxWeight])
+    .range([1, 10]); // Adjust thickness range as needed
+
+  const link = svg.append("g")
+    .attr("stroke", "#aaa")
+    .selectAll("line")
+    .data(links)
+    .join("line")
+    .attr("stroke-opacity", 0.6)
+    .attr("stroke-width", d => edgeWidthScale(d.weight)); // Vary stroke width
+
+
+  const nodeGroup = svg.append("g")
+    .selectAll("g")
+    .data(nodes)
+    .join("g")
+    .attr("class", "graph-node");
+
+  nodeGroup.append("circle")
+    .attr("r", 15)
+    .attr("fill", d => colorScale(d.continent))
+    .on("click", (event, d) => onClick(d, nodes, links, simulation, nodeGroup.selectAll("circle"), link));
+
+  nodeGroup.append("text")
+    .text(d => d.id)
+    .attr("text-anchor", "middle")
+    .attr("dy", 4)
+    .attr("fill", "white")
+    .attr("font-size", 10);
+
+  function ticked() {
+    nodeGroup.attr("transform", d => `translate(${d.x},${d.y})`);
+
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+  }
+}
+
+function forceBoundingCircle(r) {
+  let nodes;
+  function force(alpha) {
+    for (const node of nodes) {
+      const dx = node.x;
+      const dy = node.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > r) {
+        const k = (dist - r) / dist * alpha * 0.75;
+        node.vx -= dx * k;
+        node.vy -= dy * k;
+      }
+    }
+  }
+  force.initialize = _ => nodes = _;
+  return force;
+}
+
+let previousSelectedNode = null;
+function onClick(d, nodes, links, simulation, nodeSel, linkSel) {
+
+  // Release previous selected node
+  if (previousSelectedNode) {
+    previousSelectedNode.fx = null;
+    previousSelectedNode.fy = null;
+  }
+
+  selected = d;
+  previousSelectedNode = d;
+
+  // Animate the node smoothly to the center
+  const steps = 120;
+  let step = 0;
+  const easeOutQuad = t => t * (2 - t);
+
+  const startX = d.x;
+  const startY = d.y;
+
+  const animateToCenter = () => {
+    const t = step / steps;
+    const ease = easeOutQuad(t);
+
+    d.fx = startX * (1 - ease);
+    d.fy = startY * (1 - ease);
+
+    step++;
+    if (step <= steps) {
+      requestAnimationFrame(animateToCenter);
+    } else {
+      d.fx = 0;
+      d.fy = 0;
+
+      // After reaching the center, delay 2 seconds, then expand the node
+      setTimeout(() => {
+        expandNode(d, nodeSel, linkSel, simulation);
+        startVideo(d, nodeSel, linkSel);  // Start the video after node expands
+      }, 2000);  // 2 seconds delay before expanding node
+    }
+  };
+
+  animateToCenter();
+
+  // Update radii and restart simulation
+  simulation.force("collision", d3.forceCollide().radius(d => {
+    if (d.id === selected.id) return 45; // Make central node bigger
+    return d.radius || 20;
+  }).strength(1));
+
+  simulation.alpha(1).restart();
+
+  highlight_node(d, nodeSel, linkSel)
+}
+
+function expandNode(d, nodeSel, linkSel, simulation) {
+  const targetRadius = Math.min(width, height);
+
+  // Move the selected node's group to the end of the parent <g> (brings it to front)
+  d3.selectAll("g.graph-node")
+    .filter(o => o.id === d.id)
+    .each(function() {
+      this.parentNode.appendChild(this);  // Move this <g> to end
+    });
+
+  nodeSel.transition().duration(1000)
+    .attr("r", o => o.id === d.id ? targetRadius : o.radius)
+    .attr("opacity", o => (o.id === d.id) ? 1 : o.opacity);
+
+  nodeSel._groups.forEach(group => {
+    const nodeData = group[0].__data__;
+    const text = group[0].parentNode.childNodes[1];
+    text.style.fontSize = nodeData.id === d.id ? "16px" : "10px";
+  });
+}
+
+function startVideo(d, nodeSel, linkSel) {
+  // Start the corresponding video after expanding the node
+  fetch('videos.json')
+    .then(res => res.json())
+    .then(json => {
+      const video = json[d.id];
+      if (video) {
+        const videoPlayer = document.getElementById("videoPlayer");
+        videoPlayer.src = video;
+        setTimeout(() => {
+          videoContainer.style.display = "block";
+          videoPlayer.play();
+        }, 700);  // Wait 1 second before starting playback
+
+      }
+    })
+    .catch(error => console.error("Error loading video:", error));
+
+  const videoContainer = document.getElementById("videoContainer");
+
+  // Set the video player to be the same size and positioned exactly like the node
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const radius = Math.min(width, height) * 0.5; // Same radius as the circle
+
+  videoContainer.style.width = `${radius * 2 + 10}px`; // Twice the radius for diameter
+  videoContainer.style.height = `${radius * 2 + 10}px`; // Twice the radius for diameter
+
+  // Convert node coordinates (d.x, d.y) to page coordinates
+  const svg = document.querySelector("svg");
+  const svgRect = svg.getBoundingClientRect();
+
+  // Get the center coordinates of the circle (node) on the page
+  const centerX = svgRect.left + width / 2 + d.x;
+  const centerY = svgRect.top + height / 2 + d.y;
+
+
+
+  // Position video container at the center of the circle (node)
+  videoContainer.style.left = `${centerX}px`;
+  videoContainer.style.top = `${centerY}px`;
+
+  // Ensure the video is always clipped in a circle
+  const videoPlayer = document.getElementById("videoPlayer");
+  videoPlayer.style.borderRadius = "50%";
+  videoPlayer.style.clipPath = "circle(50%)"; // Clip the video to be a circle
+
+  videoContainer.style.zIndex = 20; // Ensure video is on top of the graph but below the nodes
+
+  // After the video ends, retract the node to its initial position and remove video
+  videoPlayer.onended = () => {
+    retractNode(d, nodeSel, linkSel);
+  };
+}
+
+function retractNode(d, nodeSel, linkSel) {
+  // Reset radii for all nodes to their default size
+  simulation.nodes().forEach(n => {
+    if (n.id === d.id) {
+      n.radius = 35; // Keep selected node larger
+      n.fx = 0;       // Keep at center
+      n.fy = 0;
+    } else {
+      n.radius = 15;
+    }
+  });
+
+  highlight_node(d, nodeSel, linkSel);
+
+  simulation.force("collision", d3.forceCollide().radius(d => d.radius || 15).strength(1));
+  simulation.alpha(1).restart();
+
+  // Hide the video
+  const videoContainer = document.getElementById("videoContainer");
+  videoContainer.style.display = "none";
+  const videoPlayer = document.getElementById("videoPlayer");
+  videoPlayer.pause();
+  videoPlayer.removeAttribute("src");
+  videoPlayer.load();
+  videoPlayer.style.clipPath = "";
+
+  // Note: Do NOT reset d.fx and d.fy here — we want the node to stay centered
+  // Do NOT reset previousSelectedNode or selected
+}
+
+function highlight_node(d, nodeSel, linkSel){
+  const connectedIds = new Set();
+  linkSel.each(link => {
+    if (link.source.id === d.id) connectedIds.add(link.target.id);
+    else if (link.target.id === d.id) connectedIds.add(link.source.id);
+  });
+
+  nodeSel.transition().duration(500)
+    .attr("r", o => {
+      if (o.id === d.id) {
+        o.radius = 35;
+        return 35;
+      } else if (connectedIds.has(o.id)) {
+        o.radius = 25;
+        return 25;
+      } else {
+        o.radius = 15;
+        return 15;
+      }
+    })
+    .attr("opacity", o => (o.id === d.id || connectedIds.has(o.id)) ? 1 : 0.5);
+
+  nodeSel._groups.forEach(group => {
+    const nodeData = group[0].__data__;
+    const text = group[0].parentNode.childNodes[1];
+    if (nodeData.id === d.id || connectedIds.has(nodeData.id)) {
+      text.style.opacity = 1;
+    } else {
+      text.style.opacity = 0;
+    }
+  });
+
+  // Update link opacity for connected links
+  linkSel.attr("stroke-opacity", link =>
+    link.source.id === d.id || link.target.id === d.id ? 0.6 : 0.1
+  );
+}
+
+document.getElementById("videoContainer").addEventListener("click", () => {
+  const video = document.getElementById("videoPlayer");
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
+  document.getElementById("videoContainer").style.display = "none";
+  selected = null;
+});
+
+document.querySelector("svg").addEventListener("click", function(event) {
+  // Ignore clicks on node elements (or their children)
+  if (event.target.closest(".graph-node")) return;
+
+  selected = null;
+  if (previousSelectedNode) {
+    previousSelectedNode.fx = null;
+    previousSelectedNode.fy = null;
+    previousSelectedNode = null;
+  }
+
+  // Reset node sizes and opacity
+  svg.selectAll("circle")
+    .transition().duration(500)
+    .attr("r", 15)
+    .attr("opacity", 1);
+
+  // Reset labels
+  svg.selectAll("g.graph-node text")._groups.forEach(group => {
+        group.forEach(text => {
+          text.style.opacity = 1
+        })
+    });
+
+  // Reset links
+  svg.selectAll("line")
+    .transition().duration(500)
+    .attr("stroke-opacity", 0.6);
+
+  // Reset force
+  simulation.force("collision", d3.forceCollide().radius(15).strength(1));
+  simulation.alpha(1).restart();
+});
+
+</script>
+</body>
+</html>

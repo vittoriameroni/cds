@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>D3 Network from GraphML</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      overflow: hidden;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+      clip-path: url(#circle-clip); /* Apply clipping path */
+    }
+    #videoContainer {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+    text {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      pointer-events: none;
+    }
+    /* Emphasize the outside with white color */
+    .circle-background {
+      fill: white;
+    }
+    /* Emphasize circle with border */
+    .circle-border {
+      fill: none;
+      stroke: #000;
+      stroke-width: 5;
+    }
+  </style>
+</head>
+<body>
+<div id="videoContainer">
+  <video id="videoPlayer" controls></video>
+</div>
+<svg>
+  <!-- Clip path for circular clipping -->
+  <defs>
+    <clipPath id="circle-clip">
+      <!-- Set radius of 30% for the clip circle -->
+      <circle cx="50%" cy="50%" r="30%" />
+    </clipPath>
+  </defs>
+  
+  <!-- White background outside the circle -->
+  <rect width="100%" height="100%" class="circle-background"/>
+  
+  <!-- Emphasized border for the clipped circle -->
+  <circle cx="50%" cy="50%" r="30%" class="circle-border"/>
+</svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+const width = window.innerWidth;
+const height = window.innerHeight;
+const radius = Math.min(width, height) * 0.3; // Set radius to 30% of the width/height
+
+const svg = d3.select("svg")
+  .attr("viewBox", [0, 0, width, height])
+  .append("g")
+  .attr("transform", `translate(${width / 2},${height / 2})`);
+
+// Filled black background circle (using radius 30%)
+svg.append("circle")
+  .attr("r", 60000)
+  .attr("fill", "black");
+
+const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+let selected = null;
+
+// Load and parse GraphML
+fetch('../graph_only_hills.graphml')
+  .then(response => response.text())
+  .then(text => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "text/xml");
+
+    const nodeElements = Array.from(xml.getElementsByTagName("node"));
+    const edgeElements = Array.from(xml.getElementsByTagName("edge"));
+
+    const nodes = Array.from(xml.getElementsByTagName("node"))
+        .map(node => {
+            const id = node.getAttribute("id");
+            const dataTags = node.getElementsByTagName("data");
+            const continentTag = Array.from(dataTags).find(d => d.getAttribute("key") === "d0");
+            const continent = continentTag ? continentTag.textContent : null;
+
+            return id && continent ? { id, continent } : null;
+        })
+        .filter(Boolean); // Removes nulls
+    console.log(nodes)
+
+    const knownIds = new Set(nodes.map(n => n.id));
+
+    const links = Array.from(xml.getElementsByTagName("edge"))
+        .map(edge => {
+        const source = edge.getAttribute("source");
+        const target = edge.getAttribute("target");
+        const dataTags = Array.from(edge.getElementsByTagName("data"));
+        const weightTag = dataTags.find(d => d.getAttribute("key") === "d1");
+        const weight = weightTag ? +weightTag.textContent : 1;
+
+        return { source, target, weight };
+    });
+
+    drawGraph(nodes, links);
+  });
+
+function drawGraph(nodes, linksRaw) {
+  // Pre-filter edges if any node has an edge with weight > 3
+  const hasHeavyEdges = linksRaw.some(e => {
+    const w = +e.weight || 0;
+    return w > 1;
+  });
+  const links = hasHeavyEdges ? linksRaw.filter(e => +e.weight > 1) : linksRaw;
+
+  const simulation = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(120).strength(1))
+    .force("charge", d3.forceManyBody().strength(-500)) // strong repulsion
+    .force("center", d3.forceCenter(0, 0))
+    .force("collision", d3.forceCollide().radius(d => d.radius || 20).strength(1))
+    .force("boundingCircle", forceBoundingCircle(radius - 15)) // Match radius of bounding circle
+    .on("tick", ticked);
+
+  const link = svg.append("g")
+    .attr("stroke", "#aaa")
+    .attr("stroke-opacity", 0.6)
+    .selectAll("line")
+    .data(links)
+    .join("line");
+
+  const nodeGroup = svg.append("g")
+    .selectAll("g")
+    .data(nodes)
+    .join("g");
+
+  nodeGroup.append("circle")
+    .attr("r", 15)
+    .attr("fill", d => colorScale(d.continent))
+    .on("click", (event, d) => onClick(d, nodes, links, simulation, nodeGroup.selectAll("circle"), link));
+
+  nodeGroup.append("text")
+    .text(d => d.id)
+    .attr("text-anchor", "middle")
+    .attr("dy", 4)
+    .attr("fill", "white")
+    .attr("font-size", 10);
+
+  function ticked() {
+    nodeGroup.attr("transform", d => `translate(${d.x},${d.y})`);
+
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+  }
+}
+
+function forceBoundingCircle(r) {
+  let nodes;
+  function force(alpha) {
+    for (const node of nodes) {
+      const dx = node.x;
+      const dy = node.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > r) {
+        const k = (dist - r) / dist * alpha * 0.75;
+        node.vx -= dx * k;
+        node.vy -= dy * k;
+      }
+    }
+  }
+  force.initialize = _ => nodes = _;
+  return force;
+}
+
+function onClick(d, nodes, links, simulation, nodeSel, linkSel) {
+  if (selected === d) {
+    fetch('videos.json')
+      .then(res => res.json())
+      .then(json => {
+        const video = json[d.id];
+        if (video) {
+          document.getElementById("videoPlayer").src = video;
+          document.getElementById("videoContainer").style.display = "block";
+        }
+      });
+    return;
+  }
+
+  selected = d;
+
+  const connectedIds = new Set();
+  links.forEach(link => {
+    if (link.source.id === d.id) connectedIds.add(link.target.id);
+    else if (link.target.id === d.id) connectedIds.add(link.source.id);
+  });
+
+  nodeSel.transition().duration(500)
+    .attr("r", o => {
+      if (o.id === d.id) {
+        o.radius = 35;
+        return 35;
+      } else if (connectedIds.has(o.id)) {
+        o.radius = 25;
+        return 25;
+      } else {
+        o.radius = 15;
+        return 15;
+      }
+    })
+    .attr("opacity", o => (o.id === d.id || connectedIds.has(o.id)) ? 1 : 0.2);
+
+  linkSel.attr("stroke-opacity", link =>
+    link.source.id === d.id || link.target.id === d.id ? 0.6 : 0.1
+  );
+
+  simulation.force("collision", d3.forceCollide().radius(d => d.radius || 15).strength(1));
+  simulation.alpha(0.6).restart();
+}
+
+document.getElementById("videoContainer").addEventListener("click", () => {
+  const video = document.getElementById("videoPlayer");
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
+  document.getElementById("videoContainer").style.display = "none";
+  selected = null;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1030 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d0" for="node" attr.name="continent" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="Assiria">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Arabia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Armenia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Albania">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Amasonia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Babilonia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Kaldea">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Cilicia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Evilath">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Frigia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Galilea">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="India">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Hircania">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Idumea">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Judea">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Ophir">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Palestina">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Pentapolis">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Persia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Sabea">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Samaria">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Siria">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Sitia">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Alania">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Alimania">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Anglia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Equitania">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Apulia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Brabantia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Dacia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Francia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Flandria">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Frisia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Grecia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Galicia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Gothia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Livonia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Macedonia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Montes">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Misena">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Norwe">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Ungaria">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Roma">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Subaudia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Saxonia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Swevi">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Tessalia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Venecia">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Wstva">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Vinland">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Island">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Braciana">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Egiptus">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Ethiopia">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Cartago">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Lybya">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Maditania">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Numedia">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Carmelus">
+      <data key="d0">Asia</data>
+    </node>
+    <node id="Ciprus">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Creta">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Gorgoles">
+      <data key="d0">Africa</data>
+    </node>
+    <node id="Rodus">
+      <data key="d0">Europe</data>
+    </node>
+    <node id="Tabrobana">
+      <data key="d0">Asia</data>
+    </node>
+    <edge source="Assiria" target="Babilonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Evilath">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="India">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Ophir">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Assiria" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Arabia" target="Idumea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Arabia" target="Judea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Arabia" target="Pentapolis">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Arabia" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Armenia" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Armenia" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Albania" target="Amasonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Albania" target="Hircania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Amasonia" target="Hircania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Kaldea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Carmelus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Judea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Ophir">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Palestina">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Babilonia" target="Samaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Kaldea" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Kaldea" target="Anglia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Kaldea" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Kaldea" target="Roma">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Evilath" target="India">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Evilath" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Evilath" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Evilath" target="Ophir">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Evilath" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Evilath" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Francia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Grecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Persia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Tessalia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frigia" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galilea" target="Idumea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galilea" target="Judea">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Galilea" target="Palestina">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galilea" target="Pentapolis">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galilea" target="Samaria">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Galilea" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Ophir">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Egiptus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Lybya">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Hircania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="India" target="Sitia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Sitia">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Hircania" target="Alimania">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Hircania" target="Brabantia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Dacia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Persia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Hircania" target="Alania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Idumea" target="Judea">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Idumea" target="Pentapolis">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Idumea" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Idumea" target="Palestina">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Idumea" target="Samaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Idumea" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Pentapolis">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Judea" target="Sabea">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Judea" target="Carmelus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Ophir">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Palestina">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Judea" target="Samaria">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Judea" target="Siria">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Judea" target="Egiptus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Lybya">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Judea" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Carmelus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Palestina">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ophir" target="Samaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Palestina" target="Carmelus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Palestina" target="Samaria">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Palestina" target="Pentapolis">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Palestina" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Pentapolis" target="Sabea">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Pentapolis" target="Samaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Pentapolis" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Pentapolis" target="Egiptus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Pentapolis" target="Lybya">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Francia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Grecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Tessalia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Ungaria">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Persia" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Alimania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Brabantia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Dacia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Sitia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Persia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sabea" target="Egiptus">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Sabea" target="Ethiopia">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Sabea" target="Lybya">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Sabea" target="Macedonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sabea" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Samaria" target="Carmelus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Samaria" target="Siria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Siria" target="Macedonia">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Siria" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Siria" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Siria" target="Egiptus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Siria" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Siria" target="Lybya">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Alimania">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Sitia" target="Brabantia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Dacia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Sitia" target="Alania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Alimania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Anglia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Equitania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Galicia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alania" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Brabantia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Dacia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Alimania" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Cartago">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Anglia" target="Roma">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Equitania">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Galicia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Anglia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Equitania" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Equitania" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Equitania" target="Galicia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Equitania" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Dacia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Brabantia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Flandria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Dacia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Francia" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Francia" target="Grecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Francia" target="Tessalia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Francia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Francia" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Frisia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Flandria" target="Wstva">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Frisia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frisia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frisia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frisia" target="Saxonia">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Frisia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frisia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Frisia" target="Wstva">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Grecia" target="Creta">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Grecia" target="Tessalia">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Grecia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Grecia" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galicia" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galicia" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galicia" target="Gothia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galicia" target="Norwe">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Galicia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Livonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Island">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Norwe">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Gothia" target="Vinland">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Livonia" target="Misena">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Livonia" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Livonia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Livonia" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Livonia" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Montes">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Egiptus">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Ethiopia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Lybya">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Macedonia" target="Tessalia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Montes" target="Tabrobana">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Misena" target="Saxonia">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Misena" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Misena" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Misena" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Norwe" target="Ungaria">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Norwe" target="Island">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Norwe" target="Vinland">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Tessalia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Saxonia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ungaria" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Roma" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Saxonia" target="Swevi">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Saxonia" target="Wstva">
+      <data key="d1">4</data>
+    </edge>
+    <edge source="Swevi" target="Wstva">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Tessalia" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Tessalia" target="Venecia">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Venecia" target="Creta">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Vinland" target="Island">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Egiptus" target="Ethiopia">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Egiptus" target="Lybya">
+      <data key="d1">3</data>
+    </edge>
+    <edge source="Ethiopia" target="Lybya">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="Ethiopia" target="Cartago">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="Ciprus" target="Rodus">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>
