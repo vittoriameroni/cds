@@ -543,42 +543,6 @@ function stop_any_interactions(){
 
 document.addEventListener('keydown', (event)=>{
   if(event.key == ' '){
-     /*    // Ignore clicks on node elements (or their children)
-      if (event.target.closest(".graph-node")) return;
-
-    if (previousSelectedNode) {
-      previousSelectedNode.fx = null;
-      previousSelectedNode.fy = null;
-      previousSelectedNode = null;
-    }
-    if (currentlySelectedNode) {
-      currentlySelectedNode.fx = null;
-      currentlySelectedNode.fy = null;
-      currentlySelectedNode = null;
-    }
-
-
-    // Reset node sizes and opacity
-    svg.selectAll("circle")
-      .transition().duration(500)
-      .attr("r", 15)
-      .attr("opacity", 1);
-
-    // Reset labels
-    svg.selectAll("g.graph-node text")._groups.forEach(group => {
-          group.forEach(text => {
-            text.style.opacity = 1
-          })
-      });
-
-    // Reset links
-    svg.selectAll("line")
-      .transition().duration(500)
-      .attr("stroke-opacity", 0.6); */
-
-    stop_any_interactions()
-  }
-  if(event.key == 'Enter'){
         // Ignore clicks on node elements (or their children)
       if (event.target.closest(".graph-node")) return;
 

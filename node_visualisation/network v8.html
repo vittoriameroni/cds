@@ -168,22 +168,11 @@ function drawGraph(nodes, linksRaw) {
     .join("g")
     .attr("class", "graph-node");
 
-    nodeGroup.append("circle")
+  nodeGroup.append("circle")
     .attr("r", 15)
     .attr("fill", d => colorScale(d.continent))
     .attr("id", d => d.id) 
     .on("click", (event, d) => onClick(d, nodes, links, simulation, nodeGroup.selectAll("circle"), link));
-
-/*     // Add progress ring (white circle) behind the main node circle
-  nodeGroup.append("circle")
-    .attr("class", "progress-ring")
-    .attr("r", 18)       // slightly bigger than main circle radius (15)
-    .attr("fill", "none")
-    .attr("stroke", "white")
-    .attr("stroke-width", 4)
-    .attr("stroke-dasharray", 2 * Math.PI * 18)
-    .attr("stroke-dashoffset", 2 * Math.PI * 18)
-    .style("opacity", 0);  // initially hidden */
 
   nodeGroup.append("text")
     .text(d => d.id)
@@ -227,48 +216,6 @@ let nodeExpansionAndVideoTimer = null
 let videoTimer = null
 let stopAnimation = false
 
-function animateProgressRing(nodeId, duration = 3000) {
-  const nodeGroup = svg.selectAll("g.graph-node");
-  const clickedNodeGroup = nodeGroup.filter(n => n.id === nodeId);
-
-  // Remove any existing progress ring on that node first
-  clickedNodeGroup.selectAll("circle.progress-ring").remove();
-
-    // Define circle parameters
-  const radius = 35;
-  const circumference = 2 * Math.PI * radius;
-
-  const progressCircle = clickedNodeGroup.append("circle")
-    .attr("class", "progress-ring")
-    .attr("r", radius)
-    .attr("fill", "none")
-    .attr("stroke", "white")
-    .attr("stroke-width", 3)
-    .attr("stroke-dasharray", circumference)
-    .attr("stroke-dashoffset", circumference)
-    .attr("pointer-events", "none");
-
-  // Animate stroke-dashoffset from circumference to 0 (fill progress)
-  progressCircle.transition()
-    .duration(duration) // duration of progress animation (match your timing)
-    .ease(d3.easeLinear)
-    .attrTween("stroke-dashoffset", () => {
-      return t => circumference * (1 - t);  // from full offset to zero
-    })
-    .on("end", () => {
-      // Optional: remove progress ring or keep it until node expands
-    });
-}
-
-function resetProgressRing() {
-  const nodeGroup = svg.selectAll("g.graph-node");
-
-  nodeGroup.selectAll("circle.progress-ring").remove();
-  console.log(nodeGroup)
-
-}
-
-
 function onClick(d, nodes, links, simulation, nodeSel, linkSel) {
   // Release all previous selected node
   simulation.nodes().forEach(n => {
@@ -301,13 +248,10 @@ function onClick(d, nodes, links, simulation, nodeSel, linkSel) {
       d.fy = 0;
 
       // After reaching the center, delay 1 seconds, then expand the node
-      nodeExpansionDuration = 5000
-      animateProgressRing(d.id, nodeExpansionDuration);
       nodeExpansionAndVideoTimer = setTimeout(() => {
         expandNode(d, nodeSel, linkSel, simulation);
         startVideo(d, nodeSel, linkSel);  // Start the video after node expands
-        resetProgressRing();
-      }, nodeExpansionDuration);  // 1 seconds delay before expanding node
+      }, 3000);  // 1 seconds delay before expanding node
     }
   };
 
@@ -357,7 +301,7 @@ function startVideo(d, nodeSel, linkSel) {
         videoTimer = setTimeout(() => {
           videoContainer.style.display = "block";
           videoPlayer.play();
-        }, 2000);  // Wait 1 second before starting playback
+        }, 2700);  // Wait 1 second before starting playback
 
       }
     })
@@ -523,9 +467,6 @@ function stop_any_interactions(){
   window.clearTimeout(videoTimer)
   //Hightlight everything again
 
-  resetProgressRing();
-
-
   //Restart the simulation
   simulation.nodes().forEach(n => {
     n.fx = null;
@@ -543,42 +484,6 @@ function stop_any_interactions(){
 
 document.addEventListener('keydown', (event)=>{
   if(event.key == ' '){
-     /*    // Ignore clicks on node elements (or their children)
-      if (event.target.closest(".graph-node")) return;
-
-    if (previousSelectedNode) {
-      previousSelectedNode.fx = null;
-      previousSelectedNode.fy = null;
-      previousSelectedNode = null;
-    }
-    if (currentlySelectedNode) {
-      currentlySelectedNode.fx = null;
-      currentlySelectedNode.fy = null;
-      currentlySelectedNode = null;
-    }
-
-
-    // Reset node sizes and opacity
-    svg.selectAll("circle")
-      .transition().duration(500)
-      .attr("r", 15)
-      .attr("opacity", 1);
-
-    // Reset labels
-    svg.selectAll("g.graph-node text")._groups.forEach(group => {
-          group.forEach(text => {
-            text.style.opacity = 1
-          })
-      });
-
-    // Reset links
-    svg.selectAll("line")
-      .transition().duration(500)
-      .attr("stroke-opacity", 0.6); */
-
-    stop_any_interactions()
-  }
-  if(event.key == 'Enter'){
         // Ignore clicks on node elements (or their children)
       if (event.target.closest(".graph-node")) return;
 
